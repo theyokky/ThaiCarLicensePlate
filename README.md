@@ -11,7 +11,7 @@
 
 ![alt text](https://github.com/theyokky/ThaiCarLicensePlate/blob/main/img/note1.JPG?raw=true)
 
-
+โดยแต่ละไฟล์และโฟลเดอร์ จะมีหน้าที่ดังนี้
 
 
 
@@ -21,6 +21,6 @@
 
 ![alt text](https://github.com/theyokky/ThaiCarLicensePlate/blob/main/img/note2.JPG?raw=true)
       
-
+โดยแต่ละไฟล์และโฟลเดอร์ จะมีหน้าที่ดังนี้
 
 
