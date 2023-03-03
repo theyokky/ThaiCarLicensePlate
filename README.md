@@ -8,21 +8,8 @@
 
 ## โปรแกรมสำหรับส่วนใช้งานจริง
 จะอยู่ในโฟลเดอร์ program โดยมีโครงสร้างดังนี้
-.
-├── program
-│   └── data
-|       └── character.yaml
-|       └── licensePlate.yaml
-│   └── img 
-│   └── models
-│   └── utils
-│   └── weights
-│   └── CharacterDetector.py
-│   └── LicensePlateDetector.py
-│   └── ThaiCharacterClassifier.py
-│   └── export.py
-│   └── main.py
 
+!https://github.com/theyokky/ThaiCarLicensePlate/blob/main/img/note1.JPG
 
 
 
