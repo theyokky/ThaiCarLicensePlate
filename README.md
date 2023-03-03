@@ -37,16 +37,19 @@
 - โฟลเดอร์ lib จะเก็บไฟล์นามสกุล py และ ipynb เอาไว้ โดยในโฟลเดอร์จะประกอบด้วยไฟล์ที่มีลำดับขั้นตอนดังนี้
 
      1. การเทรน LicensePlateDetector Model
-          1.1) เนื่องจากเป็นการใช้โมเดล YOLOv5 มาทำ Transfer Learning จึงแนะนำให้เทรนไฟล์ *TrainYolov5_CarLicensePlate.ipynb* บน colab 
+     
+          เนื่องจากเป็นการใช้โมเดล YOLOv5 มาทำ Transfer Learning จึงแนะนำให้เทรนไฟล์ *TrainYolov5_CarLicensePlate.ipynb* บน colab 
           โดยทางผู้จัดทำจะเชื่อม colab กับ google drive ที่เก็บดาต้าที่ใช้สำหรับเทรนเอาไว้
           สามารถเข้าไปดูดาต้าและดาวน์โหลดเพื่อเทรนได้ที่ https://drive.google.com/drive/folders/11sDgoP3YTBUPNkhVMoB0-yObhQ5_hFwC
 
      2. การเทรน CharacterDetector Model
-          2.1) เนื่องจากเป็นการใช้โมเดล YOLOv5 มาทำ Transfer Learning จึงแนะนำให้เทรนไฟล์ *TrainYolov5LicensePlate.ipynb* บน colab 
+
+          เนื่องจากเป็นการใช้โมเดล YOLOv5 มาทำ Transfer Learning จึงแนะนำให้เทรนไฟล์ *TrainYolov5LicensePlate.ipynb* บน colab 
           โดยทางผู้จัดทำจะเชื่อม colab กับ google drive ที่เก็บดาต้าที่ใช้สำหรับเทรนเอาไว้
           สามารถเข้าไปดูดาต้าและดาวน์โหลดเพื่อเทรนได้ที่ https://drive.google.com/drive/folders/1H7Dawsy4CVbpmp-LRLVAiB8Vhxbqdb6v
 
      3. การเทรน ThaiCharacterClassifier Model
+
           3.1 *PreProcessData.py* จะทำหน้าที่จัดการดาต้าจากโฟลเดอร์ char_train มารวบรวมให้เป็นโฟลเดอร์ char_pre_processed_v11 พร้อมทั้งจัดการเพิ่ม padding และ noise หลังจากการทดลองแล้วการทำ padding ขนาด 200x300 และเพิ่ม noise แล้วจะให้ผลลัพธ์ออกมาดีที่สุดคือ accuracy 83%
 
           3.2 *MakeTrainTestValData.py* จะทำหน้าที่นำดาต้ารูปภาพจากโฟลเดอร์ char_pre_processed_v11 มารวบรวมเป็นโฟลเดอร์ char_pre_processed_v11_noise_normal_padding200x300 ที่มีการแบ่งดาต้าเป็น Train , Test และ Validation ให้พร้อมสำหรับการเข้าเทรนโมเดล
