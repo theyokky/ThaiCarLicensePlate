@@ -19,7 +19,7 @@
 ## ส่วนของการ Train โมเดล
 จะอยู่ในโฟลเดอร์ train โดยมีโครงสร้างดังนี้
 
-![alt text](https://github.com/theyokky/ThaiCarLicensePlate/blob/main/img/note1.JPG?raw=true)
+![alt text](https://github.com/theyokky/ThaiCarLicensePlate/blob/main/img/note2.JPG?raw=true)
 
       
 
