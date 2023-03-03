@@ -9,7 +9,7 @@
 ## โปรแกรมสำหรับส่วนใช้งานจริง
 จะอยู่ในโฟลเดอร์ program โดยมีโครงสร้างดังนี้
 
-!https://github.com/theyokky/ThaiCarLicensePlate/blob/main/img/note1.JPG
+![alt text](https://github.com/theyokky/ThaiCarLicensePlate/blob/main/img/note1.JPG?raw=true)
 
 
 
