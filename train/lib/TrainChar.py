@@ -50,7 +50,7 @@ if __name__ == '__main__':
        tf.keras.layers.Flatten(),
        tf.keras.layers.Dense(128, activation='relu'),
        tf.keras.layers.Dropout(0.5),
-       tf.keras.layers.Dense(2 ,activation='softmax')
+       tf.keras.layers.Dense(54 ,activation='softmax')
      ])
      model.compile(optimizer='adam',
                loss='sparse_categorical_crossentropy',

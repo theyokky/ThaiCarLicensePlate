@@ -6,43 +6,6 @@ import tensorflow as tf
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 
-# # Astb412_400_30_22_161 , Astb312_300_30_18_161
-# img = cv2.imread("Astb412_400_30_22_161.bmp")
-# old_image_height, old_image_width, channels = img.shape
-# print("img =         " ,old_image_height, old_image_width, channels)
-
-# # รีไซส์ภาพด้วยบัญญัติไตรยางศ์ 
-# # new_width = int((old_image_width/old_image_height)*200)
-# # img_resize = cv2.resize(img, (new_width,200))
-# # height, width, channels = img_resize.shape
-# # print("img_resize = " ,height, width, channels)
-
-# # convert color black and white
-# img_invert = cv2.bitwise_not(img)
-# cv2.imshow("inverted", img_invert)
-
-# # padding
-# new_image_width = 400
-# new_image_height = 400
-# color = (0,0,0)
-# img_padding = np.full((new_image_height,new_image_width, channels), color, dtype=np.uint8)
-# # compute center offset
-# x_center = (new_image_width - old_image_width) // 2
-# y_center = (new_image_height - old_image_height) // 2
-# # copy img image into center of img_padding image
-# img_padding[y_center:y_center+old_image_height, 
-#        x_center:x_center+old_image_width] = img_invert
-
-# # โชว์รูป
-# cv2.imshow("img", img)
-# # cv2.imshow("img_resize", img_resize)
-# cv2.imshow("img_padding", img_padding)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows() 
-
-# ------------------------------------------------------------
-
-
 model_filename='best_model.h5'
 model = tf.keras.models.load_model(model_filename)
 body_shape_label = ["c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10", 
