@@ -8,7 +8,7 @@ from utils.augmentations import letterbox
 import numpy as np
 
 class CharacterDetector:
-    def __init__(self, weights_path='weights/best_licensePlate.pt'):
+    def __init__(self, weights_path='weights/best_character.pt'):
         self.conf_thres=0.45
         self.iou_thres=0.45 
         self.max_det=1000  
@@ -18,7 +18,7 @@ class CharacterDetector:
         self.model = DetectMultiBackend(weights_path, 
                                         device=self.device, 
                                         dnn=False, 
-                                        data='data/licensePlate.yaml', 
+                                        data='data/character.yaml', 
                                         fp16=False)
         self.stride, self.names, self.pt = self.model.stride, self.model.names, self.model.pt
         self.imgsz = check_img_size((640, 640), s=self.stride)  
