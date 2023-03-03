@@ -27,8 +27,8 @@ def padding(img, image_width=200, image_height=200):
      img_padding[y_center:y_center+old_image_height, x_center:x_center+old_image_width] = img
      return img_padding
 
-path ="D:\\study\\thai_alphabet\\data\\char_train\\char_train\\"
-path_write = "D:/study/thai_alphabet/data/char_pre_processed_v11"
+path = "data_char/char_train"
+path_write = "data_char/char_pre_processed_v11"
 
 for root, dirs, files in os.walk(path):
 	for file_name in files:
