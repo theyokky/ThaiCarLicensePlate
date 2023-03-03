@@ -15,26 +15,11 @@
 
 
 
-
-
-
-
-
-
-
 ------------------------------------------------------------------------------------------------------------------------
 ## ส่วนของการ Train โมเดล
 จะอยู่ในโฟลเดอร์ train โดยมีโครงสร้างดังนี้
 
-.
-├── train
-│   └── data_char
-|       └── char_pre_processed_v11
-|       └── char_pre_processed_v11_noise_normal_padding200x300
-|       └── char_train
-│   └── lib 
-│   └── models
-
+![alt text](https://github.com/theyokky/ThaiCarLicensePlate/blob/main/img/note1.JPG?raw=true)
 
       
 
