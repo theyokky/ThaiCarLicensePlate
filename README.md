@@ -20,7 +20,6 @@
 จะอยู่ในโฟลเดอร์ train โดยมีโครงสร้างดังนี้
 
 ![alt text](https://github.com/theyokky/ThaiCarLicensePlate/blob/main/img/note2.JPG?raw=true)
-
       
 
 
