@@ -66,8 +66,8 @@
 
 โดยจะมีวิธีการทำงานหลักรวมๆ ดังรูปนี้
 
-
-     
+![alt text](https://github.com/theyokky/ThaiCarLicensePlate/blob/main/img/note3.JPG?raw=true)
+    
 1) รันไฟล์ main.py ในโฟลเดอร์ program 
 
 โดยตอนนี้กำลังอยู่ในขั้นตอนทดลองใช้งานคลาสและฟังก์ชัน LicensePlateDetector และ CharacterDetector
