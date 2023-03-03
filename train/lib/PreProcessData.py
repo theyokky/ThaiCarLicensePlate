@@ -6,7 +6,6 @@ from os import walk
 import os
 import cv2
 import imutils
-import time
 
 def makeNoise(img, size_pixel=30, color=[0,0,0], size_noise=11):
      img_height, img_width, img_chanels = img.shape
@@ -39,7 +38,6 @@ for root, dirs, files in os.walk(path):
 			print(str_folder)
 			# name_img = os.path.join(root,file).split("\\")[7]
 			img = cv2.imread(os.path.join(root,file_name))
-			# img = imutils.resize(img, height=50)
 			
 			if img.shape[0] > 30 and img.shape[1] > 30 and str_folder != 'n1':
 				img = cv2.resize(img, (80,80))
@@ -80,7 +78,6 @@ for root, dirs, files in os.walk(path):
 				# 			cv2.imwrite(f"{path_write}/{str_folder}/{file_name}" , img_noise_padding)
 			
 			if img.shape[0] > 20 and img.shape[1] > 15 and str_folder == 'n1':
-				# print(img.shape)
 				img = cv2.resize(img, (80,80))
 				image_height, image_width, channels = img.shape
 				
