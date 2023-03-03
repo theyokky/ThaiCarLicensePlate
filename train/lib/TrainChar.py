@@ -27,7 +27,7 @@ def loadImages(data_path, size=(80,80)):
 if __name__ == '__main__':
      
      # set parameters
-     data_path = "data_char/char_pre_processed_v11_noise_normal_padding200x300"
+     data_path = "data/char_pre_processed_v11_noise_normal_padding200x300"
      save_data = "data_loaded.mat"
      model_filename = "models/best_model11_noise_normal_padding200x300"
      
