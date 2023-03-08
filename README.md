@@ -39,14 +39,14 @@
      1) การเทรน LicensePlateDetector Model
      
           เนื่องจากเป็นการใช้โมเดล YOLOv5 มาทำ Transfer Learning จึงแนะนำให้เทรนไฟล์ *TrainYolov5_CarLicensePlate.ipynb* บน colab 
-          โดยทางผู้จัดทำจะเชื่อม colab กับ google drive ที่เก็บดาต้าที่ใช้สำหรับเทรนเอาไว้
-          สามารถเข้าไปดูดาต้าและดาวน์โหลดเพื่อเทรนได้ที่ https://drive.google.com/drive/folders/11sDgoP3YTBUPNkhVMoB0-yObhQ5_hFwC
+          เป็นไฟล์สำเร็จรูปที่พร้อมรันเทรนได้เลย มีการนำดาต้ารูปภาพมาจาก Roboflow พร้อมเทรนเรียบร้อย 
+          หลังจากเทรนเสร็จแล้ว weight ที่พร้อมใช้งานจะถูกดาวน์โหลดลงคอมพิวเตอร์ของผู้เทรนในรูปแบบของไฟล์นามสกุล pt
 
      2) การเทรน CharacterDetector Model
 
           เนื่องจากเป็นการใช้โมเดล YOLOv5 มาทำ Transfer Learning จึงแนะนำให้เทรนไฟล์ *TrainYolov5LicensePlate.ipynb* บน colab 
-          โดยทางผู้จัดทำจะเชื่อม colab กับ google drive ที่เก็บดาต้าที่ใช้สำหรับเทรนเอาไว้
-          สามารถเข้าไปดูดาต้าและดาวน์โหลดเพื่อเทรนได้ที่ https://drive.google.com/drive/folders/1H7Dawsy4CVbpmp-LRLVAiB8Vhxbqdb6v
+          เป็นไฟล์สำเร็จรูปที่พร้อมรันเทรนได้เลย มีการนำดาต้ารูปภาพมาจาก Roboflow พร้อมเทรนเรียบร้อย 
+          หลังจากเทรนเสร็จแล้ว weight ที่พร้อมใช้งานจะถูกดาวน์โหลดลงคอมพิวเตอร์ของผู้เทรนในรูปแบบของไฟล์นามสกุล pt
 
      3) การเทรน ThaiCharacterClassifier Model
 
