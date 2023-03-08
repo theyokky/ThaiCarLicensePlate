@@ -14,8 +14,8 @@ def copyImages(source_path, des_path, filenames):
 if __name__ == '__main__':
      
      # set parameters
-     data_path = "data/char_pre_processed_v11"
-     save_path = "data/char_pre_processed_v11_noise_normal_padding200x300"
+     data_path = "../data/char_pre_processed_v11"
+     save_path = "../data/char_pre_processed_v11_noise_normal_padding200x300"
      ratio = [0.70, 0.15, 0.15] # train/val/test ratio
      
      # make dir
