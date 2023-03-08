@@ -27,14 +27,14 @@ def padding(img, image_width=200, image_height=200):
      img_padding[y_center:y_center+old_image_height, x_center:x_center+old_image_width] = img
      return img_padding
 
-path = "data/char_train"
-path_write = "data/char_pre_processed_v11"
+path = "..\\data\\char_train"
+path_write = "..\\data\\char_pre_processed_v11"
 
 for root, dirs, files in os.walk(path):
 	for file_name in files:
 		if(file_name.endswith(".bmp")):
-			# print(os.path.join(root))
-			str_folder = os.path.join(root).split("\\")[6]
+			print(os.path.join(root))
+			str_folder = os.path.join(root).split("\\")[3]
 			print(str_folder)
 			# name_img = os.path.join(root,file).split("\\")[7]
 			img = cv2.imread(os.path.join(root,file_name))
