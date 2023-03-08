@@ -37,12 +37,16 @@
 - โฟลเดอร์ lib จะเก็บไฟล์นามสกุล py และ ipynb เอาไว้ โดยในโฟลเดอร์จะประกอบด้วยไฟล์ที่มีลำดับขั้นตอนดังนี้
 
      1) การเทรน LicensePlateDetector Model และ การเทรน CharacterDetector Model
+          
+          โดย LicensePlateDetector Model จะเป็นโมเดลที่ใช้ detect หาแผ่นป้ายทะเบียนรถ และ CharacterDetector Model จะเป็นโมเดลที่ใช้ detect ตัวอักษร ตัวเลข และจังหวัดบนแผ่นป้ายทะเบียนรถ
      
           เนื่องจากเป็นการใช้โมเดล YOLOv5 มาทำ Transfer Learning จึงแนะนำให้เทรนไฟล์ *TrainYolov5_CarLicensePlate.ipynb* และ *TrainYolov5LicensePlate.ipynb* บน colab 
           เป็นไฟล์สำเร็จรูปที่พร้อมรันเทรนได้เลย มีการนำดาต้ารูปภาพมาจาก Roboflow ซึ่งผู้จัดทำได้ทำการ annotation พร้อมเทรนเรียบร้อย 
           หลังจากเทรนเสร็จแล้ว weight ที่พร้อมใช้งานจะถูกดาวน์โหลดลงคอมพิวเตอร์ของผู้เทรนในรูปแบบของไฟล์นามสกุล pt
 
      2) การเทรน ThaiCharacterClassifier Model
+        
+          โดย ThaiCharacterClassifier Model จะเป็นโมเดลที่ใช้ classify รูปภาพตัวอักษรและตัวเลข
 
           2.1) *PreProcessData.py* จะทำหน้าที่จัดการดาต้าจากโฟลเดอร์ char_train มารวบรวมให้เป็นโฟลเดอร์ char_pre_processed_v11 พร้อมทั้งจัดการเพิ่ม padding และ noise หลังจากการทดลองแล้วการทำ padding ขนาด 200x300 และเพิ่ม noise แล้วจะให้ผลลัพธ์ออกมาดีที่สุดคือ accuracy 83%
 
