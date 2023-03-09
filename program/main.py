@@ -88,13 +88,26 @@ class imgInformation():
         
 if __name__ == '__main__':
      
-     img_information = imgInformation(0)
-     img = cv2.imread("img/car2.jpg")
+     # img_information = imgInformation(0)
+     # img = cv2.imread("img/car2.jpg")
      
-     # predict
-     img_information.predict(img)
+     # # predict
+     # img_information.predict(img)
    
-     # write on frame
-     img_information.writeOnFrame("font_thai.ttf", 32, img, "img/result.jpg")
+     # # write on frame
+     # img_information.writeOnFrame("font/font_thai.ttf", 32, img, "img/result.jpg")
+     
+     cap = cv2.VideoCapture("img/IMG_6374.mp4")
+     while(True):
+          ret, frame = cap.read()
+          # frame = cv2.resize(frame, (1000,1000))
+          cv2.imshow('okkk', frame)
+          if cv2.waitKey(1) & 0xFF == ord('q'):
+               break
+     cap.release()
+     cv2.destroyAllWindows()
+         
+
+  
      
  
