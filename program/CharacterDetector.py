@@ -9,7 +9,7 @@ import numpy as np
 
 class CharacterDetector:
     def __init__(self, weights_path='weights/best_character.pt'):
-        self.conf_thres=0.45
+        self.conf_thres=0.7
         self.iou_thres=0.45 
         self.max_det=1000  
         self.classes=None  
@@ -49,7 +49,8 @@ class CharacterDetector:
                 h = x2-x1
                 bbox = [x1, y1, x2 - x1, y2 - y1]
                 # cls = int(cls)
-                output.append([bbox , conf , image_original[y1:y1+w , x1:x1+h]])
+                if cls == 0: # เอาแต่ตัวอักษรหรือเลข ยังไม่เอาจังหวัด
+                    output.append([bbox , conf , image_original[y1:y1+w , x1:x1+h]])
                 
         return output
     
