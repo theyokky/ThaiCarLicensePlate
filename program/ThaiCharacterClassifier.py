@@ -37,9 +37,9 @@ class ThaiAlphabetClassifier():
         img[img <= 200] = 0
         # img[img > 100] = 255
         
-        cv2.imshow("ok", img)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+        # cv2.imshow("ok", img)
+        # cv2.waitKey(0)
+        # cv2.destroyAllWindows()
         
         img = cv2.resize(img , (80,80))
         img = img/255
