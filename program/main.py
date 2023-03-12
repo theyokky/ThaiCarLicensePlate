@@ -17,10 +17,10 @@ class imgInformation():
           self.character_str = []
      
      def writeOnFrame(self, font_path, font_size, frame):
-          print(len(self.character_found))
-          print(len(self.character_box))
-          print(len(self.character_img))
-          print(len(self.character_str))
+          # print(len(self.character_found))
+          # print(len(self.character_box))
+          # print(len(self.character_img))
+          # print(len(self.character_str))
           for i in range(len(self.lcp_box)):
                text = ""
                x, y, w, h = self.lcp_box[i]
@@ -92,7 +92,7 @@ if __name__ == '__main__':
      cap = cv2.VideoCapture("img/IMG_6374.mp4")
      
      frameSize = (1000, 1000)
-     out = cv2.VideoWriter('video_result.avi',cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
+     out = cv2.VideoWriter('result/video_result.avi',cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
      while(True):
           ret, frame = cap.read()
           
