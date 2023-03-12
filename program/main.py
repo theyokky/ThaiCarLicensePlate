@@ -4,10 +4,11 @@ from ThaiCharacterClassifier import ThaiAlphabetClassifier
 import cv2
 import numpy as np
 from PIL import ImageFont, ImageDraw, Image
+import torch
+import glob
 
 class imgInformation():
-     def __init__(self, name=""):
-          self.id = None
+     def __init__(self):
           self.lcp_box = []
           self.lcp_img = []
           self.character_found = []
@@ -15,7 +16,7 @@ class imgInformation():
           self.character_img = []
           self.character_str = []
      
-     def writeOnFrame(self, font_path, font_size, frame, frame_result_path):
+     def writeOnFrame(self, font_path, font_size, frame):
           print(len(self.character_found))
           print(len(self.character_box))
           print(len(self.character_img))
@@ -32,7 +33,7 @@ class imgInformation():
                     draw = ImageDraw.Draw(img_pil)
                     draw.text((x, y-32),  text, font = font, fill = (0,255,0))
                     frame = np.array(img_pil)
-          cv2.imwrite(frame_result_path , frame)
+          return frame
           
      def predict(self, frame):
           thai_char_label = ['ก', 'ข', 'ซ', 'ณ', 'ญ', 'ฎ', 'ฏ', 'ฐ', 'ฑ', 'ฒ', 'ณ', 'ด', 'ฃ', 
@@ -88,24 +89,48 @@ class imgInformation():
         
 if __name__ == '__main__':
      
-     # img_information = imgInformation(0)
-     # img = cv2.imread("img/car2.jpg")
-     
-     # # predict
-     # img_information.predict(img)
-   
-     # # write on frame
-     # img_information.writeOnFrame("font/font_thai.ttf", 32, img, "img/result.jpg")
-     
      cap = cv2.VideoCapture("img/IMG_6374.mp4")
+     
+     frameSize = (1000, 1000)
+     out = cv2.VideoWriter('video_result.avi',cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
      while(True):
           ret, frame = cap.read()
-          # frame = cv2.resize(frame, (1000,1000))
+          
+          img_information = imgInformation()
+          
+          # predict
+          img_information.predict(frame)
+     
+          # write on frame
+          frame = img_information.writeOnFrame("font/font_thai.ttf", 40, frame)
+          
           cv2.imshow('okkk', frame)
           if cv2.waitKey(1) & 0xFF == ord('q'):
                break
+          
+          img = frame
+          out.write(img)
+          torch.cuda.empty_cache()
+          
+     out.release()
      cap.release()
      cv2.destroyAllWindows()
+     
+     # frameSize = (500, 500)
+
+     # out = cv2.VideoWriter('output_video.avi',cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
+
+     # for filename in glob.glob('img/*.jpg'):
+     #      img = cv2.imread(filename)
+     #      out.write(img)
+
+     # out.release()
+          
+     
+
+
+     
+         
          
 
   
