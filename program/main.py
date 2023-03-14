@@ -89,7 +89,7 @@ class imgInformation():
         
 if __name__ == '__main__':
      
-     cap = cv2.VideoCapture("img/IMG_6374.mp4")
+     cap = cv2.VideoCapture("input/IMG_6374.mp4")
      
      frameSize = (1000, 1000)
      out = cv2.VideoWriter('result/video_result.avi',cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
