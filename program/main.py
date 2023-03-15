@@ -91,8 +91,8 @@ if __name__ == '__main__':
      
      cap = cv2.VideoCapture("input/IMG_6374.mp4")
      
-     frameSize = (1000, 1000)
-     out = cv2.VideoWriter('result/video_result.avi',cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
+     # frameSize = (1000, 1000)
+     # out = cv2.VideoWriter('result/video_result.avi',cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
      while(True):
           ret, frame = cap.read()
           
@@ -109,22 +109,14 @@ if __name__ == '__main__':
                break
           
           img = frame
-          out.write(img)
+          # out.write(img)
           torch.cuda.empty_cache()
           
-     out.release()
+     # out.release()
      cap.release()
      cv2.destroyAllWindows()
      
-     # frameSize = (500, 500)
-
-     # out = cv2.VideoWriter('output_video.avi',cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
-
-     # for filename in glob.glob('img/*.jpg'):
-     #      img = cv2.imread(filename)
-     #      out.write(img)
-
-     # out.release()
+   
           
      
 
