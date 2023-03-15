@@ -17,10 +17,6 @@ class imgInformation():
           self.character_str = []
      
      def writeOnFrame(self, font_path, font_size, frame):
-          # print(len(self.character_found))
-          # print(len(self.character_box))
-          # print(len(self.character_img))
-          # print(len(self.character_str))
           for i in range(len(self.lcp_box)):
                text = ""
                x, y, w, h = self.lcp_box[i]
@@ -68,10 +64,6 @@ class imgInformation():
                     char_boxs.append([])   
                self.character_img.append(char_list)
                self.character_box.append(char_boxs)
-               
-          #### ไว้ดูตัวอักษรที่ตัดมาได้เฉยๆ
-          # for i in range(len(char_imgs)):
-          #      cv2.imwrite(f"img/{i}_lcp.jpg" , char_imgs[i])
           
           # classify character
           for i in range(len(self.character_img)):
@@ -89,10 +81,9 @@ class imgInformation():
         
 if __name__ == '__main__':
      
-     cap = cv2.VideoCapture("input/IMG_6374.mp4")
+     video_name = str(input())
+     cap = cv2.VideoCapture(f"input/{video_name}")
      
-     # frameSize = (1000, 1000)
-     # out = cv2.VideoWriter('result/video_result.avi',cv2.VideoWriter_fourcc(*'DIVX'), 60, frameSize)
      while(True):
           ret, frame = cap.read()
           
@@ -104,15 +95,13 @@ if __name__ == '__main__':
           # write on frame
           frame = img_information.writeOnFrame("font/font_thai.ttf", 40, frame)
           
-          cv2.imshow('okkk', frame)
+          cv2.imshow('video', frame)
           if cv2.waitKey(1) & 0xFF == ord('q'):
                break
           
           img = frame
-          # out.write(img)
           torch.cuda.empty_cache()
           
-     # out.release()
      cap.release()
      cv2.destroyAllWindows()
      
