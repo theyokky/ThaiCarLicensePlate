@@ -70,7 +70,7 @@
 
 2.) เข้าไปที่โฟลเดอร์ program ของตัวโปรเจค
 
-3.) ติดตั้ง library ที่จำเป็น ด้วยการรันคำสั่ง pip install torch torchvision tensorflow imutils
+3.) ติดตั้ง library ที่จำเป็น ด้วยการรันคำสั่ง pip install torch torchvision tensorflow imutils opencv-python
 
 4.) รันไฟล์ main.py 
 
